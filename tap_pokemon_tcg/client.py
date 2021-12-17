@@ -26,10 +26,7 @@ class PokemonStream(RESTStream):
     def authenticator(self) -> APIKeyAuthenticator:
         """Return a new authenticator object."""
         return APIKeyAuthenticator.create_for_stream(
-            self,
-            key="X-Api-Key",
-            value=self.config.get("api_key"),
-            location="header"
+            self, key="X-Api-Key", value=self.config.get("api_key"), location="header"
         )
 
     @property

@@ -18,6 +18,7 @@ STREAM_TYPES = [
 
 class TapPokemonTCG(Tap):
     """PokemonTCG tap class."""
+
     name = "tap-pokemon-tcg"
 
     config_jsonschema = th.PropertiesList(
@@ -25,7 +26,7 @@ class TapPokemonTCG(Tap):
             "api_key",
             th.StringType,
             required=True,
-            description="The API Key to authenticate against the API service"
+            description="The API Key to authenticate against the API service",
         ),
     ).to_dict()
 

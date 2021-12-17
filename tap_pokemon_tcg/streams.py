@@ -12,6 +12,7 @@ SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
 class CardsStream(PokemonStream):
     """Define custom stream."""
+
     name = "cards"
     path = "/cards"
     primary_keys = ["id"]
@@ -20,6 +21,7 @@ class CardsStream(PokemonStream):
 
 class SetsStream(PokemonStream):
     """Define custom stream."""
+
     name = "sets"
     path = "/sets"
     primary_keys = ["id"]
