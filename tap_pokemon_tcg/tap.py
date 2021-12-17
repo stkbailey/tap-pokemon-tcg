@@ -20,7 +20,6 @@ class TapPokemonTCG(Tap):
     """PokemonTCG tap class."""
     name = "tap-pokemon-tcg"
 
-    # TODO: Update this section with the actual config values you expect:
     config_jsonschema = th.PropertiesList(
         th.Property(
             "api_key",
