@@ -1,33 +1,32 @@
 # tap-pokemon-tcg
 
-`tap-pokemon-tcg` is a Singer tap for PokemonTCG.
+`tap-pokemon-tcg` is a Singer tap for the official [Pokemon Trading Card Game website](https://tcg.pokemon.com/). It is based on the [v2 API](https://pokemontcg.io/) provided to developers.
 
-Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
+The tap contains two streams -- `cards` and `sets` -- that are set to full table replication. The tap is built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 
 ## Installation
 
-- [ ] `Developer TODO:` Update the below as needed to correctly describe the install procedure. For instance, if you do not have a PyPi repo, or if you want users to directly install from your git repo, you can modify this step as appropriate.
+You can install the tap vai the Github repo:
 
 ```bash
-pipx install tap-pokemon-tcg
+pip install git+https://github.com/stkbailey/tap-pokemon-tcg
 ```
 
-## Configuration
+## Capabilities
 
-### Accepted Config Options
+* `catalog`
+* `state`
+* `discover`
+* `about`
+* `stream-maps`
 
-- [ ] `Developer TODO:` Provide a list of config options accepted by the tap.
+## Settings
 
-A full list of supported settings and capabilities for this
-tap is available by running:
+| Setting| Required | Default | Description |
+|:-------|:--------:|:-------:|:------------|
+| api_key| True     | None    | The API Key to authenticate against the API service |
 
-```bash
-tap-pokemon-tcg --about
-```
-
-### Source Authentication and Authorization
-
-- [ ] `Developer TODO:` If your tap requires special access on the source system, or any special authentication requirements, provide those here.
+A full list of supported settings and capabilities is available by running: `tap-pokemon-tcg --about`
 
 ## Usage
 
@@ -42,8 +41,6 @@ tap-pokemon-tcg --config CONFIG --discover > ./catalog.json
 ```
 
 ## Developer Resources
-
-- [ ] `Developer TODO:` As a first step, scan the entire project for the text "`TODO:`" and complete any recommended steps, deleting the "TODO" references once completed.
 
 ### Initialize your Development Environment
 
