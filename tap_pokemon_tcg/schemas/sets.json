@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "required": [],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "series": {
+            "type": "string"
+        },
+        "printedTotal": {
+            "type": "integer"
+        },
+        "total": {
+            "type": "integer"
+        },
+        "legalities": {
+            "type": "object",
+            "required": [],
+            "properties": {
+                "unlimited": {
+                    "type": "string"
+                }
+            }
+        },
+        "ptcgoCode": {
+            "type": "string"
+        },
+        "releaseDate": {
+            "type": "string"
+        },
+        "updatedAt": {
+            "type": "string"
+        },
+        "images": {
+            "type": "object",
+            "required": [],
+            "properties": {
+                "symbol": {
+                    "type": "string"
+                },
+                "logo": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
