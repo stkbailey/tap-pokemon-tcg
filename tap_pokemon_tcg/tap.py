@@ -2,13 +2,10 @@
 
 from typing import List
 
-from singer_sdk import Tap, Stream
-from singer_sdk import typing as th  # JSON schema typing helpers
+from singer_sdk import Stream, Tap
+from singer_sdk import typing as th
 
-from tap_pokemon_tcg.streams import (
-    CardsStream,
-    SetsStream,
-)
+from tap_pokemon_tcg.streams import CardsStream, SetsStream
 
 STREAM_TYPES = [
     CardsStream,

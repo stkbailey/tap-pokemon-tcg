@@ -1,15 +1,11 @@
 """REST client handling, including PokemonStream base class."""
 
-import requests
 from pathlib import Path
-from typing import Any, Dict, Optional, Union, List, Iterable
+from typing import Any, Dict, Optional
 
-from memoization import cached
-
-from singer_sdk.helpers.jsonpath import extract_jsonpath
-from singer_sdk.streams import RESTStream
+import requests
 from singer_sdk.authenticators import APIKeyAuthenticator
-
+from singer_sdk.streams import RESTStream
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
@@ -26,7 +22,7 @@ class PokemonStream(RESTStream):
     def authenticator(self) -> APIKeyAuthenticator:
         """Return a new authenticator object."""
         return APIKeyAuthenticator.create_for_stream(
-            self, key="X-Api-Key", value=self.config.get("api_key"), location="header"
+            self, key="X-Api-Key", value=self.config["api_key"], location="header"
         )
 
     @property

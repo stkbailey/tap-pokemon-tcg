@@ -1,3 +1,5 @@
+![example workflow](https://github.com/stkbailey/tap-pokemon-tcg/actions/workflows/ci_workflow.yml/badge.svg)
+
 # tap-pokemon-tcg
 
 `tap-pokemon-tcg` is a Singer tap for the official [Pokemon Trading Card Game website](https://tcg.pokemon.com/). It is based on the [v2 API](https://pokemontcg.io/) provided to developers.

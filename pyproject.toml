@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tap-pokemon-tcg"
-version = "0.0.1"
+version = "0.1.0"
 description = "`tap-pokemon-tcg` is a Singer tap for PokemonTCG, built with the Meltano SDK for Singer Taps."
 authors = ["Stephen Bailey"]
 keywords = [
